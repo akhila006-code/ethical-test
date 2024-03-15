@@ -1,6 +1,6 @@
 from flask import Flask,request,render_template
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 @app.route("/", methods=["GET","POST"])
 def index():
@@ -28,5 +28,5 @@ def answer():
 def end():
         return(render_template("end.html"))
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     app.run()
